@@ -1,4 +1,5 @@
-convert <img src="image.ans"> tags to html ansi-art elements in the browser
+convert <img src="image.ans"> tags to html>pre ansi-art elements in the browser
+with <body onload="convertImages()">
 
 special thank to
 

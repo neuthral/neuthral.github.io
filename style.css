@@ -7,13 +7,15 @@ body {
 }
 
 div {
-    clear: both;
+    
 }
 pre {
-    font-size: 12px;
+    clear: both;
+    font-size: 10px;
     font-style: normal;
-    
     font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    display: block;
 }
 a, a:visited, a:active {
     color: #FCE5AC;
@@ -24,10 +26,23 @@ a, a:visited, a:active {
 .hide { 
     display: none;
 }
-.container {
-    width: 80%;
+.header {
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
+    width: max-content;
+    height: auto;
+    /*border: 2px solid white;*/
+} .header pre {
+    font-size: 1.2vw 1q .5rem;
+    font-variant: small-caps;
+}
+
+.container {
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .console {
