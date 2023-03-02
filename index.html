@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="convertImages()">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div>
+            <span style='float:left;'>
+                <img src="./icon.ans"> <b style="color:#F1C688;">ansi</b> board
+            </span>
+        </div>
+        <div class="topinfo">
+            <p>
+                <a href="#">::miniblog</a>
+                <a href="#">::server</a>
+                <a href="#">::ect</a>
+            </p>
+            <hr>
+            <div id="console">
+                <img src="./hivemind.ans" alt="" srcset="">
+            </div>
+        </div>
+
+        <script src="ansi_up.js" type="text/javascript"></script>
+        <!-- <script src="wsock.js" type="text/javascript"></script> -->
+        <script type="text/javascript">
+            // 
+            
+            var ansi_up = new AnsiUp;
+            var cdiv = document.getElementById("console");
+            
+            var arts = [
+                './spider.ans',
+                './illumina.ans',
+                './hivemind.ans'
+            ]
+            var ansElements = []
+
+            const getAnsFile = (uri) => fetch(uri)
+                .then(res => res.text())
+                .then(res => {
+                    var html = ansi_up.ansi_to_html(res)
+                    const newAns = document.createElement('pre')
+                    newAns.innerHTML = html
+                    newAns.id = Date.now()
+                    newAns.setAttribute('title', uri)
+                    newAns.classList.add('ansi-element')
+                    
+                    cdiv.appendChild(newAns)
+
+                    ansElements.push({id: newAns.id, el: newAns, name: uri})
+                    
+                    console.clear()
+                    console.table(ansElements)
+                })
+
+            //arts.forEach(i => getAnsFile(i))
+            function convertImages() {
+                document.querySelectorAll('img').forEach(el => {
+                    fetch(el.src)
+                        .then(res => res.text())
+                        .then(res => {
+                            const preEl = document.createElement('pre')
+                            preEl.innerHTML = (ansi_up.ansi_to_html(res))
+                            preEl.id = Date.now()
+
+                            el.insertAdjacentElement('afterEnd', preEl)
+                            el.classList.add('hide')
+                            console.log(` \n${res}`)
+                        })
+                    
+                })
+            }
+            
+
+        </script>
+        
+    
+    </body>
+</html>

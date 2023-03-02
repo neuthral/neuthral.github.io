@@ -1,0 +1,47 @@
+body {
+    background-color: #221A0F;
+    color: #FCE5AC;
+    padding-left: auto;
+    padding-right: auto;
+    padding-bottom: 16px;
+}
+
+div {
+    clear: both;
+}
+pre {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+a:any-link {
+    color: #FCE5AC;
+    text-decoration: none;
+}
+.hide { 
+    display: none;
+}
+.topinfo {
+    width: 80%;
+    margin-left: 8px;
+}
+
+.topinfo p {
+    position: relative;
+    bottom: -12px;
+    font-family: monospace;
+}
+.topinfo a {
+
+}
+.console {
+    margin: 0;
+    margin-bottom: 16px;
+    font-family: monospace;
+    line-height: 1.1;
+    background: black;
+    height: 100%;
+    width: 80%;
+    overflow-y: scroll;
+}
