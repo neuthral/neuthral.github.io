@@ -19,19 +19,24 @@
         <![endif]-->
         
         <div class="header">
-            <img src="crow.ans">
+            <img src="resources/crow.ans">
 
             <div class="container">
+                <a href="//neuthral.github.io">
+                    <a class="green-text">█▀▀▄ █▀▀ █░░█ ▀▀█▀▀ █░░█ █▀▀█ █▀▀█ █░░</a><a class="light-text"> ░ █▀▀▀ ░▀░ ▀▀█▀▀ █░░█ █░░█ █▀▀▄ ░</a><a class="blue-text"> ░▀░ █▀▀█</a><br>
+                    <a class="green-text">█░░█ █▀▀ █░░█ ░░█░░ █▀▀█ █▄▄▀ █▄▄█ █░░</a><a class="light-text"> ░ █░▀█ ▀█▀ ░░█░░ █▀▀█ █░░█ █▀▀▄ ░</a><a class="blue-text"> ▀█▀ █░░█</a><br>
+                    <a class="green-text">▀░░▀ ▀▀▀ ░▀▀▀ ░░▀░░ ▀░░▀ ▀░▀▀ ▀░░▀ ▀▀▀</a><a class="light-text"> ▀ ▀▀▀▀ ▀▀▀ ░░▀░░ ▀░░▀ ░▀▀▀ ▀▀▀░ ▀</a><a class="blue-text"> ▀▀▀ ▀▀▀▀</a><br>
+                </a>
+                <br>
                 <span class="light-text">
                     <a class="green-text">ANSI</a>
                     <a class="red-text">art</a>
-                    for browsers ...
+                    in img tags
                 </span>
 
                 <footer>
-                    <img src="github.ans">
+                    <img src="resources/github.ans">
                     <br>
-                    <a href="//neuthral.github.io">neuthral.github.io</a>
                 </footer>
             </div>
         </div>
@@ -51,6 +56,12 @@
             function convertImages() {
                 document.querySelectorAll('img').forEach(el => {
                     fetch(el.src)
+                        .then(res => {
+                            if (!res.ok) {
+                                throw Error(res.statusText)
+                            }
+                            return res
+                        })
                         .then(res => res.text())
                         .then(res => {
                             const preEl = document.createElement('pre')
@@ -62,8 +73,8 @@
                             el.insertAdjacentElement('afterEnd', preEl)
                             el.classList.add('hide')
                             
-                            console.log(preEl.id, ` \n${res}`)
-                        })
+                            console.log(preEl.id, ` \n${preEl}`)
+                        }).catch(err => console.error(err))
                     
                 })
             }
