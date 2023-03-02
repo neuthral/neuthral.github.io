@@ -22,10 +22,10 @@
             <img src="resources/crow.ans">
 
             <div class="container">
-                <a href="//neuthral.github.io">
-                    <a class="green-text">█▀▀▄ █▀▀ █░░█ ▀▀█▀▀ █░░█ █▀▀█ █▀▀█ █░░</a><a class="light-text"> ░ █▀▀▀ ░▀░ ▀▀█▀▀ █░░█ █░░█ █▀▀▄ ░</a><a class="blue-text"> ░▀░ █▀▀█</a><br>
-                    <a class="green-text">█░░█ █▀▀ █░░█ ░░█░░ █▀▀█ █▄▄▀ █▄▄█ █░░</a><a class="light-text"> ░ █░▀█ ▀█▀ ░░█░░ █▀▀█ █░░█ █▀▀▄ ░</a><a class="blue-text"> ▀█▀ █░░█</a><br>
-                    <a class="green-text">▀░░▀ ▀▀▀ ░▀▀▀ ░░▀░░ ▀░░▀ ▀░▀▀ ▀░░▀ ▀▀▀</a><a class="light-text"> ▀ ▀▀▀▀ ▀▀▀ ░░▀░░ ▀░░▀ ░▀▀▀ ▀▀▀░ ▀</a><a class="blue-text"> ▀▀▀ ▀▀▀▀</a><br>
+                <a href="https://neuthral.github.io">
+                    <i class="green-text">█▀▀▄ █▀▀ █░░█ ▀▀█▀▀ █░░█ █▀▀█ █▀▀█ █░░</i><i class="light-text"> ░ █▀▀▀ ░▀░ ▀▀█▀▀ █░░█ █░░█ █▀▀▄ ░</i><i class="blue-text"> ░▀░ █▀▀█</i><br>
+                    <i class="green-text">█░░█ █▀▀ █░░█ ░░█░░ █▀▀█ █▄▄▀ █▄▄█ █░░</i><i class="light-text"> ░ █░▀█ ▀█▀ ░░█░░ █▀▀█ █░░█ █▀▀▄ ░</i><i class="blue-text"> ▀█▀ █░░█</i><br>
+                    <i class="green-text">▀░░▀ ▀▀▀ ░▀▀▀ ░░▀░░ ▀░░▀ ▀░▀▀ ▀░░▀ ▀▀▀</i><i class="light-text"> ▀ ▀▀▀▀ ▀▀▀ ░░▀░░ ▀░░▀ ░▀▀▀ ▀▀▀░ ▀</i><i class="blue-text"> ▀▀▀ ▀▀▀▀</i><br>
                 </a>
                 <br>
                 <span class="light-text">
@@ -33,11 +33,19 @@
                     <a class="red-text">art</a>
                     in img tags
                 </span>
-
-                <footer>
-                    <img src="resources/github.ans">
-                    <br>
-                </footer>
+                <br>
+                <ul class="ul-links">
+                    <li>
+                        <a href="http://github.com/neuthral">
+                            <img src="resources/github.ans">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://github.com/neuthral">
+                            <img src="resources/github.ans">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -54,15 +62,13 @@
             var ansElements = []
 
             function convertImages() {
+                // scan the document for img elements and convert to pre
                 document.querySelectorAll('img').forEach(el => {
-                    fetch(el.src)
+                    fetch(el.currentSrc, {mode: 'no-cors'})
                         .then(res => {
-                            if (!res.ok) {
-                                throw Error(res.statusText)
-                            }
-                            return res
+                            if(!res.ok) throw Error(res.statusText)
+                            return res.text()
                         })
-                        .then(res => res.text())
                         .then(res => {
                             const preEl = document.createElement('pre')
                             preEl.innerHTML = (ansi_up.ansi_to_html(res))
@@ -74,7 +80,8 @@
                             el.classList.add('hide')
                             
                             console.log(preEl.id, ` \n${preEl}`)
-                        }).catch(err => console.error(err))
+                        })
+                        .catch(console.error)
                     
                 })
             }

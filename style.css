@@ -13,6 +13,7 @@ pre {
     position: relative;
     display: block;
 }
+
 a, a:visited, a:active {
     color: #FCE5AC;
     text-decoration: none;
@@ -35,9 +36,7 @@ a, a:visited, a:active {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    
 }
-
 .console {
     margin: 0;
     margin-bottom: 16px;
@@ -48,7 +47,14 @@ a, a:visited, a:active {
     width: 80%;
     overflow-y: scroll;
 }
-
+.ul-links {
+    margin: 0;
+    padding: 0;
+}
+.ul-links li {
+    list-style-type:none;
+    display: inline-block;
+}
 .green {
     background-color: #34D399;
   }
