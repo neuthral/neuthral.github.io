@@ -1,6 +1,6 @@
 body {
-    background-color: #221A0F;
-    color: #FCE5AC;
+    background-color: #171717;
+    color: #F7FAED;
     padding-left: auto;
     padding-right: auto;
     padding-bottom: 16px;
@@ -15,10 +15,12 @@ pre {
     font-weight: 900;
     font-family: 'Courier New', Courier, monospace;
 }
-a:any-link {
+a, a:visited, a:active {
     color: #FCE5AC;
     text-decoration: none;
+    font-weight: bold;
 }
+
 .hide { 
     display: none;
 }

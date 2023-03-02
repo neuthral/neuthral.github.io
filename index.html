@@ -76,7 +76,9 @@
                             const preEl = document.createElement('pre')
                             preEl.innerHTML = (ansi_up.ansi_to_html(res))
                             preEl.id = Date.now()
-
+                            preEl.setAttribute('title', el.src)
+                            preEl.classList.add('ansi-element')
+                            
                             el.insertAdjacentElement('afterEnd', preEl)
                             el.classList.add('hide')
                             console.log(` \n${res}`)
