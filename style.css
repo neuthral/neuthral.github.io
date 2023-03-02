@@ -1,9 +1,9 @@
 body {
     background-color: #171717;
     color: #F7FAED;
-    padding-left: auto;
-    padding-right: auto;
-    padding-bottom: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 div {
@@ -12,7 +12,7 @@ div {
 pre {
     font-size: 12px;
     font-style: normal;
-    font-weight: 900;
+    
     font-family: 'Courier New', Courier, monospace;
 }
 a, a:visited, a:active {
@@ -24,26 +24,54 @@ a, a:visited, a:active {
 .hide { 
     display: none;
 }
-.topinfo {
+.container {
     width: 80%;
-    margin-left: 8px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.topinfo p {
-    position: relative;
-    bottom: -12px;
-    font-family: monospace;
-}
-.topinfo a {
-
-}
 .console {
     margin: 0;
     margin-bottom: 16px;
     font-family: monospace;
-    line-height: 1.1;
+    line-height: 1.0;
     background: black;
     height: 100%;
     width: 80%;
     overflow-y: scroll;
 }
+
+.green {
+    background-color: #34D399;
+  }
+  .green-text {
+    color: #34D399;
+  }
+  .yellow-text {
+      color: #dbca45;
+      font-weight: bold;
+  }
+  .red-bg {
+      background-color: #FF2266;
+  }
+  .red-text {
+      color: #FF2266;
+  }
+  .light-bg {
+      background-color: #F7FAED;
+  }
+  .light-text {
+      color: #F7FAED;
+  }
+  .blue-bg {
+      background-color: #00AAFF;
+  }
+  .blue-text {
+      color: #00AAFF;
+  }
+  .dark-bg {
+      background-color: #171717;
+  }
+  .dark-text {
+      color: #171717;
+  }
