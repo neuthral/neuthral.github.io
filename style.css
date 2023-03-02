@@ -5,10 +5,6 @@ body {
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
-
-div {
-    
-}
 pre {
     clear: both;
     font-size: 10px;
@@ -27,22 +23,19 @@ a, a:visited, a:active {
     display: none;
 }
 .header {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     width: max-content;
     height: auto;
     /*border: 2px solid white;*/
-} .header pre {
-    font-size: 1.2vw 1q .5rem;
-    font-variant: small-caps;
 }
-
 .container {
-    
     margin-left: auto;
     margin-right: auto;
     text-align: left;
+    
 }
 
 .console {
