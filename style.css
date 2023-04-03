@@ -50,10 +50,17 @@ a, a:visited, a:active {
 .ul-links {
     margin: 0;
     padding: 0;
+    
 }
 .ul-links li {
-    list-style-type:none;
-    display: inline-block;
+    list-style-type: none;
+    
+    padding: 4px;
+}
+.ansi-element {
+    display: block;
+    max-width: inherit;
+    overflow-x: hidden;
 }
 .green {
     background-color: #34D399;

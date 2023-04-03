@@ -10,7 +10,7 @@
         <title>ANSI board</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?=">
     </head>
     <body onload="convertImages()">
         <!--[if lt IE 7]>
@@ -34,33 +34,28 @@
                     in img tags
                 </span>
                 <br>
+                <p class="light-text">
+                    credit goes to <b class="green-text">github.com/drudru/ansi_up</b> for ansi-to-html converter in JS
+                    <br>
+                    and <b class="green-text">github.com/hzeller/timg</b> for converting images in terminal to ansi-text
+                </p>
+            </div>
+            <div class="container">
                 <ul class="ul-links">
-                    <li>
-                        <a href="http://github.com/neuthral">
-                            <img src="resources/github.ans">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://github.com/neuthral">
-                            <img src="resources/github.ans">
-                        </a>
-                    </li>
+                    <li><img src="resources/hivemind.ans"></li>
+                    <li><img src="resources/ring.ans"></li>
+                    <li><img src="resources/spider.ans"></li>
+                    <li><img src="resources/icon.ans"></li>
                 </ul>
             </div>
         </div>
-
+        
         <script src="ansi_up.js" type="text/javascript"></script>
         <!-- <script src="wsock.js" type="text/javascript"></script> -->
         <script type="text/javascript">
             // 
             var ansi_up = new AnsiUp            
-            var arts = [
-                './spider.ans',
-                './illumina.ans',
-                './hivemind.ans'
-            ]
-            var ansElements = []
-
+            
             function convertImages() {
                 // scan the document for img elements and convert to pre
                 document.querySelectorAll('img').forEach(el => {
@@ -77,7 +72,7 @@
                             preEl.classList.add('ansi-element')
                             
                             el.insertAdjacentElement('afterEnd', preEl)
-                            el.classList.add('hide')
+                            el.remove()
                             
                             console.log(preEl.id, ` \n${preEl}`)
                         })
@@ -85,7 +80,6 @@
                     
                 })
             }
-            
 
         </script>
         
