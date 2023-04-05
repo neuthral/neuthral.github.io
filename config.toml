@@ -25,8 +25,8 @@ highlight_theme = "ayu-dark"
 toc = true
 use_cdn = false
 theme = "auto"
-mathjax = false
-mathjax_dollar_inline_enable = false
+mathjax = true
+mathjax_dollar_inline_enable = true
 stylesheets = [
     #"something_else.css"
 ]
