@@ -1,6 +1,4 @@
-[submodule "wiki"]
-	path = wiki
-	url = https://github.com/neuthral/neuthral.github.io.wiki.git
 [submodule "themes/apollo"]
 	path = themes/apollo
 	url = https://github.com/not-matthias/apollo
+	ignore = dirty
