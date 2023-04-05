@@ -8,6 +8,7 @@ build_search_index = false
 minify_html = true
 generate_feed = false
 feed_filename = "rss.xml"
+output_dir = "docs"
 
 # taxonomies = [
 #     { name = "tags", feed = true, paginate_by = 10 },
