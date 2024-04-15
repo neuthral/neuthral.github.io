@@ -1,0 +1,51 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>neuthral.github.io</title>
+	<link>http://example.org/tags/lol/</link>
+	<description>Recent content in lol on neuthral.github.io</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Mon, 15 Apr 2024 17:11:44 +0300</lastBuildDate>
+    
+        <atom:link href="http://example.org/tags/lol/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>New Blog Post</title>
+		<link>http://example.org/blog/new-blog-post/</link>
+		<pubDate>Mon, 15 Apr 2024 17:16:11 +0300</pubDate>
+		
+		<guid>http://example.org/blog/new-blog-post/</guid>
+		<description>&lt;p&gt;new blog post&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Autobio</title>
+		<link>http://example.org/autobio/</link>
+		<pubDate>Mon, 15 Apr 2024 17:11:44 +0300</pubDate>
+		
+		<guid>http://example.org/autobio/</guid>
+		<description>&lt;p&gt;{{ .taglist }}&lt;/p&gt;
+&lt;p&gt;This is my autobio, yay&lt;/p&gt;
+&lt;p&gt;see my &lt;a href=&#34;http://example.org/about&#34;&gt;About page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://example.org/vscode.webp&#34; alt=&#34;vscode&#34;&gt;&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>About</title>
+		<link>http://example.org/about/</link>
+		<pubDate>Mon, 15 Apr 2024 17:07:45 +0300</pubDate>
+		
+		<guid>http://example.org/about/</guid>
+		<description>&lt;p&gt;Here is markdown&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- list
+- listitem
+- bashd
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>

@@ -1,51 +1,8 @@
-# The URL the site will be built for
-base_url = "https://neuthral.github.io"
-title = "neuthral.github.io"
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'neuthral.github.io'
+theme = 'lugo'
 
-# settings
-default_language = "en"
-build_search_index = false
-minify_html = true
-generate_feed = false
-feed_filename = "rss.xml"
-output_dir = "docs"
+[params]
+    description = "This is totally Your blog"
 
-# taxonomies = [
-#     { name = "tags", feed = true, paginate_by = 10 },
-# ]
-
-# theme
-theme = "apollo"
-
-[markdown]
-highlight_code = true
-highlight_theme = "ayu-dark"
-
-[extra]
-toc = true
-use_cdn = false
-theme = "auto"
-mathjax = true
-mathjax_dollar_inline_enable = true
-stylesheets = [
-    #"something_else.css"
-]
-
-menu = [
-    { name = "/posts", url = "/posts", weight = 1 },
-    { name = "/projects", url = "/projects", weight = 2 },
-    { name = "/about", url = "/about", weight = 3 },
-    { name = "/other", url = "/other", weight = 4 },
-]
-
-socials = [
-    { name = "github", url = "https://github.com/neuthral/", icon = "github" },
-    { name = "wiki", url = "https://github.com/neuthral/wiki", icon = "youtube" },
-    { name = "rss", url = "/rss.xml", icon = "rss" },
-]
-
-custom_css = []
-
-[extra.analytics]
-enabled = true
-goatcounter_user = "neuthral"

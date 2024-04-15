@@ -1,0 +1,145 @@
+body {
+	
+	font-family: sans-serif ;
+	color: #cfc895 ;
+	background:#0A0C10 url(flatcity.svg) top no-repeat;
+	background-size: contain;
+}
+a, a:visited {
+	color: #0490DB;
+}
+main {
+	max-width: 800px ;
+	margin: auto ;
+}
+
+img {
+	max-width: 100% ;
+}
+
+header {
+	height: 32vw;
+}
+
+header h1 {
+	text-align: center ;
+}
+
+footer {
+	text-align: center ;
+	clear: both ;
+}
+
+/* For TAGLIST.HTML */
+.taglist {
+	text-align: center ;
+	clear: both ;
+}
+
+main {
+	width: 100%;
+}
+article {
+	display: inline-block;
+	max-width: 49%;
+}
+
+/* For NEXTPREV.HTML */
+#nextprev {
+	/* The container for both the previous and next articles. */
+}
+#prevart {
+	float: left ;
+	text-align: left ;
+}
+#nextart {
+	float: right ;
+	text-align: right ;
+}
+#nextart,#prevart {
+	max-width: 33% ;
+}
+
+.chip {
+	display: inline-block;
+	padding: 0 25px;
+	height: 50px;
+	font-size: 16px;
+	line-height: 50px;
+	border-radius: 25px;
+	background-color: #f1f1f1;
+	color: #000;
+}
+
+.chip img {
+	float: left;
+	margin: 0 10px 0 -25px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+.window * {
+	box-sizing: border-box;
+}
+
+/* The browser window */
+.window {
+	border: 0 solid #000;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	max-width: auto;
+	float: right;
+}
+
+/* Container for columns and the top "toolbar" */
+.row {
+	padding: 8px;
+	background: #636363;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	max-height: 40px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+	float: left;
+}
+
+.left {
+	width: 25%;
+}
+
+.right {
+	position: relative;
+	float: right;
+	top: -16px;
+}
+
+.middle {
+	width: 65%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Three dots */
+.dot {
+	margin-top: 2px;
+	height: 22px;
+	width: 22px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+/* Page content */
+.content {
+	padding: 10px;
+	background-color: #202020;
+	font-family: monospace;
+}
