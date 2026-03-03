@@ -1,8 +1,0 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'neuthral.github.io'
-theme = 'lugo'
-
-[params]
-    description = "This is totally Your blog"
-
